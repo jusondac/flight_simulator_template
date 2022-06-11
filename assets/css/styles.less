@@ -1,26 +1,205 @@
 @import './variable.less';
+@import './component.less';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;1,400&display=swap');
 
-* {margin: 0; padding: 0;}
+* {margin: 0; padding: 0; font-family: @font-default}
 
-.header {
-  height: 8rem;
-  width: 100vw;
+body {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  .header-content {
+}
+
+.right {
+  border-right: 1px solid rgb(202, 202, 202);
+  height: 100vh;
+  width: 20vw;
+  .right-logo {
     display: flex;
-    justify-content: space-between;
-    border: 1px solid green;
-    width: 50vw;
-    height: 100%;
+    height: 20vh;
     align-items: center;
-    box-shadow: @box-shadow;
-    .header-title {
-
+    .logo-image {
+      @w_and_h: 9rem;
+      img {
+        width: @w_and_h;
+        height: @w_and_h;
+        object-fit: cover;
+      }
     }
-    .header-account {
+    .logo-title {
+      h2 {
+        letter-spacing: 3px;
+      }
+    }
+  }
+  .right-menu {
+    width: 100%;
+    height: 60%;
+    .menu-search {
+      height: 20%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      input[type="text"] {
+        width: 80%;
+        height: 50%;
+        border-radius: 3rem;
+        padding: 0 2rem;
+        outline: none;
+        border:none;
+        margin-left: 1rem;
+        background: rgb(240, 240, 240);
+      }
+      button {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        outline: none;
+        border: none;
+        position: relative;
+        right: 2.5rem;
+        color: rgb(116, 116, 116);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .menu-list {
+      .list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        a {
+          font-size: 13px !important;
+          text-decoration: none;
+          color: @color-light;
+          font-size: 1.2rem;
+          width: inherit;
+          height: 3rem;
+          transition: all 300ms ease;
+          display: inherit;
+          align-items: center;
+          &:hover, &.active {
+            color: @color-primary;
+          }
+          span {
+            margin: 0 1rem;
+          }
+        }
+      }
+      p {
+        color: @color-light;
+        font-size: 14px;
+        margin-left: 1rem;
+      }
+    }
+  }
+  .right-footer {
+    width: 100%;
+    height: 20vh;
+    .footer-profile {
+      display: flex;
+      align-items: center;
+      height: 50%;
+      img {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-left: 20px;
+      }
+      .profile-info {
+        margin-left: 1rem;
+        font-size: 14px;
+        .role {
+          color: @color-light;
+        }
+      }
+      a {
+        margin-left: 30px;
+      }
+    }
+    .footer-button {
+      display: flex;
+      height: 50%;
+      align-items: center;
+      justify-content: center;
+      a {
+        border-radius: 1rem;
+        width: 90%;
+        height: 80%;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        background: @color-primary;
+        color: white;
+        font-size: 14px;
+        box-shadow: @box-shadow;
+        span {
+          margin: 0 1rem;
+        }
+      }
+    }
+  }
+}
 
+.content {
+  width: 50vw;
+  height: 100vh;
+  padding-left: 2rem;
+  .greeting {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .greeting-name {
+      font-size: 24px;
+    }
+    .greeting-date {
+      font-size: 14px;
+      color: @color-light;
+    }
+  }
+  .chart {
+    height: 40vh;
+    display: flex;
+    width: 100%;
+    border: 1px solid rgb(202, 202, 202);
+    border-radius: 9px;
+    .chart-info {
+      margin: 1rem;
+      display: flex;
+      justify-content: space-between;
+      width: inherit;
+      .info-title {
+        .title-date {
+          margin-top: 1rem;
+          font-size: 14px;
+          color: @color-light;
+        }
+      }
+      .info-finance {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        height: 50%;
+        .revenue {
+          display: flex;
+          color: @color-light;
+          font-size: 14px;
+          .total-value {
+            color: @color-success;
+            margin-left: 1rem;
+          }
+        }
+        .finance-value {
+          font-size: 25px;
+          margin: 1rem 0;
+          font-weight: bold;
+        }
+        .finance-info {
+          font-size: 13px;
+          color: @color-light;
+        }
+      }
     }
   }
 }

@@ -6,6 +6,8 @@
     <meta nane="viewport" content="width-device-width, initial-scale-1.0">
     <link rel="stylesheet/less" type="text/css" href="./assets/css/styles.less" />
     <script src="https://cdn.jsdelivr.net/npm/less@4" defer></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="assets/js/script.js"></script>
     <title>FLIGHT</title>
     <!-- MATERIAL CDN -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
@@ -14,17 +16,107 @@
     <!-- STYLESHEET -->
     <link rel="stylesheet" href="./style.css">
   </head>
-  <body>
+  <body class="bg-white">
   <!--- CONTENT OF FLIGHT--->
-  <div class="header">
-    <div class="header-content">
-      <div class="header-title">
-        <h1>title</h1>
+    <div class="right">
+      <div class="right-logo">
+        <div class="logo-image">
+          <img src="assets/img/flight_logo.png" alt="">
+        </div>
+        <div class="logo-title">
+          <h2>Flight</h2>
+        </div>
       </div>
-      <div class="header-account">
-        <h1>account</h1>
+      <div class="right-menu">
+        <div class="menu-search">
+          <input type="text" placeholder="Search">
+          <button type="submit">
+            <span class="material-icons-sharp">
+              search
+            </span>
+          </button>
+        </div>
+        <div class="menu-list">
+          <p>Menu</p>
+          <div class="list">
+            <a href="#" class="active">
+              <span class="material-icons-sharp">
+                dashboard
+              </span>Dashboard
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp">
+                schedule
+              </span>Schedule
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp">
+                person
+              </span>Customer
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp">
+                inventory
+              </span>Brand
+            </a>
+            <a href="#">
+              <span class="material-icons-sharp">
+                settings
+              </span>Setting
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="right-footer">
+        <div class="footer-profile">
+          <img src="./assets/img/nophoto.jpeg" alt="">
+          <div class="profile-info">
+            <p class="username">Rejka Permana</p>
+            <p class="role">Admin</p>
+          </div>
+          <a href="#">
+            <span class="material-icons-sharp">
+              more_horiz
+            </span>
+          </a>
+        </div>
+        <div class="footer-button">
+          <a href="#">
+            <span class="material-icons-sharp">
+              logout
+            </span> logout
+          </a>
+        </div>
       </div>
     </div>
-  </div>
+    <div class="content">
+      <div class="greeting">
+        <p class="greeting-name">Welcome, Rejka Permana</p>
+        <p class="greeting-date">Sabtu, 11 Juni 2022</p>
+      </div>
+      <div class="chart">
+        <div class="chart-info">
+          <div class="info-title">
+            <p class="title">Impression & Data Traffic</p>
+            <p class="title-date">Jan 1, 2022 - Juli 1, 2022</p>
+          </div>
+          <div class="info-finance">
+            <div class="revenue">
+              <p class="total-title">Total Revenue</p>
+              <p class="total-value">+75%</p>
+            </div>
+            <div class="finance-value">
+              $78,000,000.00
+            </div>
+            <div class="finance-info">
+              <p>Increase 18% from last mounth</p>
+            </div>
+          </div>
+        </div>        
+      </div>
+    </div>
+    <div class="left">
+
+    </div>
   </body>
 </html>
